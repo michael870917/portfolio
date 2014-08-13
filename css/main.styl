@@ -1,11 +1,267 @@
-fondo = #f6f6f6
-naranja = #d4751c
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+vendor-prefixes = 0 ms moz webkit official
+
+fondo 		= #eeeeee
+naranja 	= #d4751c
+amarinaran = #f4bc32
+naranja_other 	= #b3480c
+cafesito 	= #905644
+gris 		= #cdcdcf
+naranjatext  = #e5932a
+gristext  = #79807c
+grisfinal = #efefef
+
+a
+	color white
 body
-	background fondo
+	background white
 	color white
 	font-family Arial
 	font-size 16px
-	font-weight normal
+
+footer
+	background linear-gradient(top, #f8f8f8,#d8d8d8 )
+	color rgba(#848484,0.5)
+	padding 1em 0
+	text-align center	
+	width 85%
+	
+	margin -60px auto
+	
+
+
 
 header
 	background naranja
+	box-shadow 0 15px 0 rgba(255,255,255,1);	
+	color white		
+	overflow hidden
+	padding 0.5em	
+	position relative	
+	z-index 2	
+
+	.encabezado
+
+		.titulo
+			font-size 1.4em
+			left 0.4em
+			position absolute
+			text-shadow 1px 1px 0px cafesito
+			top -0.5em	
+
+
+		.telefonos
+			font-size .8em
+			position absolute
+			right 0.5em	
+			top 0.5em			
+			.llamada
+			.numerotel
+				padding 2px				
+				font-weight bold
+				box-shadow 0 1px 0 rgba(orange,1);		
+			.llamada
+				background linear-gradient(top,amarinaran,naranja_other)
+				border-radius 10px 0 0 10px
+				float left
+				padding-left 10px
+				text-shadow 1px 1px 0px orange
+			.numerotel	
+				background gris
+				border-radius 0 10px 10px 0
+				color #000
+				float right				
+				padding-right 10px
+				text-shadow 1px 1px 0px white
+	
+
+	nav				
+		text-align center
+
+		.menu			
+			width 100%			
+			margin-top: 30px
+			margin-bottom: -10px
+			padding 0
+			overflow-x auto
+			overflow-y hidden
+			white-space nowrap
+			
+			li
+				display inline-block				
+				position relative
+
+				a					
+					font-size 0.7em
+					font-style italic
+					font-weight bold
+					padding 3px 10px 0 10px
+					text-decoration none
+
+				a:hover
+					background white
+					border-radius 25%  25% 0 0	
+					color cafesito
+					font-weight bold
+					padding 3px 10px 0 10px
+
+
+.elementos
+	margin-top 10px
+
+	.elemento
+		
+		.descripcion
+			background white
+
+			.detalles				
+				height 150px
+				margin-left 90px
+				overflow auto
+
+				.tag
+				.titulotag
+					margin 0	
+					padding .2em
+
+				.tag
+					color gristext	
+					font-style italic
+					text-align justify
+
+	
+				.titulotag
+					color naranjatext					
+					font-size 1.2em
+					
+
+				
+
+			.imagenfig
+				float left
+				margin 0
+				margin-left 20px
+				padding-top 25px
+				
+				.imagenart
+					height 62px
+					vertical-align top
+					width 60px	
+
+	
+	.leyenda
+		height 100px
+
+		.seccionfinal
+			background grisfinal
+			margin 0
+			padding 15px
+			border-radius 5px
+			position relative
+
+			&:before
+				content ""
+				width 0
+				position absolute
+				border-style solid
+				border-width 20px 5px 0 5px
+				border-color grisfinal transparent grisfinal transparent
+				bottom -20px
+				left 20px
+			
+			.contenidoleyenda
+				color gristext
+				padding 0.2em
+				text-align justify
+
+			.autorcont
+				float right
+				margin-top: -15px;	
+				
+				.autor
+				.sitioweb
+					font-size 0.8em
+					font-style italic
+
+
+				.autor						
+					color gristext
+				
+				.sitioweb
+					color naranjatext					
+					
+				p
+					display inline
+	
+	.slideFotosFin		
+		padding 15px
+		background #e37d1e
+		width 85%
+		margin 60px auto
+		position relative
+
+		&:after
+			content ""
+			width 0
+			position absolute
+			border-style solid
+			border-width 5px 0 0 20px
+			border-color transparent #e37d1e
+			top 91px
+			right -19px
+		&:before
+			content ""
+			width 0
+			position absolute
+			border-style solid
+			border-width 5px 20px 0 0
+			border-color transparent #e37d1e
+			top 91px
+			left -19px
+
+		.contenedorFotos
+			display inline-block
+			img
+					
+
+
+@media screen and (min-width: 768px)
+
+	header
+		
+		.encabezado
+			height 50px
+			.titulo
+				margin-left 140px
+				font-size 2em
+
+			.telefonos
+			
+				right 10em
+				top 1em	
+			
+		nav
+			.menu
+				width 70%
+				margin-left 150px
+
+				li
+					a
+						font-size .8em
+						padding 0 10px 0 10px
+
+
+
+	.elementos
+		margin-top 10px
+		margin 0 auto
+		width 80%
+
+		.elemento			
+			display inline-block
+			vertical-align top
+			width 33%
+			
+			
